@@ -9,5 +9,7 @@ namespace BeehiveManagementSystem
     public class HoneyManufacturer : Bee
     {
         public HoneyManufacturer(string job): base(job) { }
+
+        public override float CostPerShift => 1.7f;
     }
 }

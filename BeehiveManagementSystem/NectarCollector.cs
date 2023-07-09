@@ -9,5 +9,7 @@ namespace BeehiveManagementSystem
     public class NectarCollector : Bee
     {
         public NectarCollector(string job) : base(job) { }
+
+        public override float CostPerShift => 1.95f;
     }
 }

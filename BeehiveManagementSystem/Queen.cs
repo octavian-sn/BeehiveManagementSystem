@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace BeehiveManagementSystem
 {
-    public class EggCare : Bee
+    internal class Queen :Bee
     {
-        public EggCare (string job) : base (job) { }
+        public Queen(string job) : base(job) { }
 
-        public override float CostPerShift => 1.35f;
+        public override float CostPerShift => 2.15f;
+
     }
 }

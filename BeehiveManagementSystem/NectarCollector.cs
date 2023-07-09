@@ -8,11 +8,11 @@ namespace BeehiveManagementSystem
 {
     public class NectarCollector : Bee
     {
-        public NectarCollector(string job) : base(job) { }
-
         public override float CostPerShift => 1.95f;
 
-        private const float NECTAR_COLLECTED_PER_SHIFT = 33.25f;
+        const float NECTAR_COLLECTED_PER_SHIFT = 33.25f;
+
+        public NectarCollector(string job) : base(job) { }
 
         protected override void DoJob()
         {

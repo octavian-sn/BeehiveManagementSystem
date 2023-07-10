@@ -72,7 +72,7 @@ namespace BeehiveManagementSystem
 
         protected override void DoJob()
         {
-            eggs *= EGGS_PER_SHIFT;
+            eggs += EGGS_PER_SHIFT;
 
             foreach (var worker in workers)
             {

@@ -19,12 +19,12 @@ namespace BeehiveManagementSystem
         public static void ConvertNectarToHoney (float amount)
         {
             if (nectar < amount) {  
-                honey = nectar * NECTAR_CONVERSION_RATIO;
+                honey += nectar * NECTAR_CONVERSION_RATIO;
                 nectar = 0;
             }
             else
             {
-                honey = amount * NECTAR_CONVERSION_RATIO;
+                honey += amount * NECTAR_CONVERSION_RATIO;
                 nectar -= amount;
             }
         }
@@ -41,7 +41,7 @@ namespace BeehiveManagementSystem
         
         public static void CollectNectar(float amount)
         {
-            if (amount > 0) nectar += amount;
+            if (amount > 0f) nectar += amount;
         }
 
         public static string StatusReport

@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace BeehiveManagementSystem
 {
-    static public class HoneyVault
+    static class HoneyVault
     {
         private const float NECTAR_CONVERSION_RATIO = .19f;
 
         private const float LOW_LEVEL_WARNING = 10f;
 
-        static private float honey = 25f;
+        private static float honey = 25f;
 
-        static private float nectar = 100f;
+        private static float nectar = 100f;
 
         public static void ConvertNectarToHoney (float amount)
         {

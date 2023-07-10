@@ -12,7 +12,7 @@ namespace BeehiveManagementSystem
 
         const float NECTAR_PROCESSED_PER_SHIFT = 33.15f;
         
-        public HoneyManufacturer(string job): base(job) { }
+        public HoneyManufacturer(): base("Honey Manufacturer") { }
 
         protected override void DoJob()
         {

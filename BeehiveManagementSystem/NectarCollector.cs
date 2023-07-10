@@ -12,7 +12,7 @@ namespace BeehiveManagementSystem
 
         const float NECTAR_COLLECTED_PER_SHIFT = 33.25f;
 
-        public NectarCollector(string job) : base(job) { }
+        public NectarCollector() : base("Nectar Collector") { }
 
         protected override void DoJob()
         {

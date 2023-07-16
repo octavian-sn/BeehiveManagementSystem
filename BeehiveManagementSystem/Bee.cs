@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 
 namespace BeehiveManagementSystem
 {
-    public class Bee
+    public abstract class Bee
     {
-        public virtual float CostPerShift { get; }
+        public abstract float CostPerShift { get; }
         public string Job { get; }
+        /* Not setting a private setter on Job means it's value can only be 
+        set during object initialization, and in this case, that's all we need.*/
         public Bee(string job)
         {
             Job = job;
@@ -18,6 +20,6 @@ namespace BeehiveManagementSystem
         {
           if (HoneyVault.ConsumeHoney(CostPerShift)) DoJob();
         }
-        protected virtual void DoJob() { /* Will be over-written by subclass */ }
+        protected abstract void DoJob();
     }
 }

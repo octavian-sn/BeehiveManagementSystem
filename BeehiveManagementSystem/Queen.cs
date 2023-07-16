@@ -19,7 +19,7 @@ namespace BeehiveManagementSystem
 
         public string StatusReport { get; private set; }
 
-        private Bee[] workers = new Bee[0];
+        private IWorker[] workers = new IWorker[0];
 
         public Queen() : base("Queen") {
             AssignBee("Egg Care");
@@ -27,7 +27,7 @@ namespace BeehiveManagementSystem
             AssignBee("Honey Manufacturer");
         }
 
-        private void AddWorker(Bee worker)
+        private void AddWorker(IWorker worker)
         {
             if (unassignedWorkers >= 1)
             {
@@ -40,7 +40,7 @@ namespace BeehiveManagementSystem
         private string WorkerStatus(string job)
         {
             int count = 0;
-            foreach (Bee worker in workers)
+            foreach (IWorker worker in workers)
                 if (worker.Job == job) count++;
             string s = "s";
             if (count == 1) s = "";
